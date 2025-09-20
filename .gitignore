@@ -1,4 +1,28 @@
-./AGENTC2/.env
-./AGENTC2/__pycache__
-./Backend/__pycache__ 
+# Environment files
+.env
 .venv
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
