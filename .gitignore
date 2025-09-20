@@ -1,0 +1,4 @@
+./AGENTC2/.env
+./AGENTC2/__pycache__
+./Backend/__pycache__ 
+.venv
