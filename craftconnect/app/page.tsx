@@ -1,12 +1,15 @@
+"use client";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const router = useRouter();
   return (
    <div className={styles.root}>
       <div className={styles.nav}>
-        <span className={styles.text}>QR Connect</span>
+        <span className={styles.text} onClick={() => router.push("/Qr")}>QR Connect</span>
         <span className={styles.logo}></span>
-        <span className={styles.text}>Marketing analytics</span>
+        <span className={styles.text} onClick={() => router.push("/")}>Marketing analytics</span>
       </div>
       <div className={styles.roller}>
          <div className={styles.marqueeContainer1}>
