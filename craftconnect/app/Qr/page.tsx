@@ -98,7 +98,7 @@ export default function QrPage() {
 
         try {
             // Use environment variable for backend URL with fallback
-            const backendUrl = "https://34.61.191.253:8000/create_story/";
+            const backendUrl = "https://api.0xkannan.ninja/create_story/";
             
             const response = await fetch(backendUrl, {
                 method: "POST",
