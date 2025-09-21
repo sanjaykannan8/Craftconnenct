@@ -10,6 +10,7 @@ from vertexai import agent_engines
 from speech import generate
 from google.genai import types
 import re
+import vertexai
 def transcribe_audio(audio_path):
     model = whisper.load_model("base")
     result = model.transcribe(audio_path)

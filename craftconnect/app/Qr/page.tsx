@@ -97,7 +97,7 @@ export default function QrPage() {
         setIsLoading(true);
 
         try {
-            const response = await fetch("http://localhost:8000/create_story/", {
+            const response = await fetch("http://34.61.191.253:8000/create_story/", {
                 method: "POST",
                 body: formData,
             });
