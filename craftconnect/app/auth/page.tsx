@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "./auth.module.css";
 
-export default function AuthPage() {
+function AuthForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [password, setPassword] = useState("");
@@ -104,5 +104,25 @@ export default function AuthPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function AuthPage() {
+    return (
+        <Suspense fallback={
+            <div className={styles.container}>
+                <div className={styles.authBox}>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>🔐 Loading...</h1>
+                        <p className={styles.subtitle}>Please wait</p>
+                    </div>
+                    <div className={styles.form}>
+                        <div className={styles.spinner}></div>
+                    </div>
+                </div>
+            </div>
+        }>
+            <AuthForm />
+        </Suspense>
     );
 }
